@@ -25,6 +25,7 @@ export class UserRepository {
 
   updateUsers(users: User[]) {
     if (users) {
+      //This will also trigger the activeId whilst i'm not updating the activeId using setActiveId and I think this is a issue
       userStore.update(upsertEntities(users));
     }
   }
